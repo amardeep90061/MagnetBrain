@@ -19,7 +19,7 @@ function Signup() {
             username,email,password
         }; 
         try {
-            const url="http://localhost:3000/auth/signup"
+            const url="https://magnet-brain-la6388ra6-amardeep-prajapatis-projects.vercel.app/auth/signup"
             const response= await fetch(url,{
                 method:"POST",
                 headers:{
