@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const task = ({task}) => {
+const Task = ({task}) => {
   return (
     <div>
       <div  className='border p-4 my-2 w-[400px] rounded'>
@@ -15,4 +15,4 @@ const task = ({task}) => {
   )
 } 
 
-export default task
+export default Task
