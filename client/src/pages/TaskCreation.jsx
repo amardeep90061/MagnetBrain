@@ -8,7 +8,7 @@ const TaskCreation = () => {
   const [dueDate, setDueDate] = useState('');
   const [message, setMessage] = useState('');
 
-  const API_URL = 'https://magnet-brain-la6388ra6-amardeep-prajapatis-projects.vercel.app/api/createTask';
+  const API_URL = 'https://magnet-brain-backend.vercel.app/api/createTask';
 
   const handleSubmit = async (e) => {
      e.preventDefault(); 
