@@ -18,7 +18,7 @@ function Login() {
             email,password
         }; 
         try {
-            const url="https://magnet-brain-la6388ra6-amardeep-prajapatis-projects.vercel.app/auth/login"
+            const url="https://magnet-brain-backend.vercel.app/auth/login"
             const response= await fetch(url,{
                 method:"POST",
                 headers:{
