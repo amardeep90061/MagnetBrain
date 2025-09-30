@@ -9,17 +9,17 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 mongoose.connect(process.env.MONGODB_URL)
-  .then(() => console.log('Connected!'));
+  .then(() => console.log('Connected!'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
-//   const corsOptions = {
-//     origin: 'https://magnet-brain-ui.vercel.app/'
-//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-//     credentials: true, 
-//     optionsSuccessStatus: 204
-// };
+  const corsOptions = {
+    origin: '*'
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, 
+    optionsSuccessStatus: 204
+};
 
 app.use(express.json());
-app.use(bodyParser.json());
 app.use(cors(corsOptions));
 
 app.get('/', (req, res) => {
