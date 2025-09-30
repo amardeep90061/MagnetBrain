@@ -26,7 +26,7 @@ export const signup = async(req, res) => {
             username: newUser.username // Ensure username is returned for consistency
         }); 
     } catch (error) {
-        res.status(500).json({message: "Internal server error",success:false});
+        res.status(500).json({message: "Internal server ",error: error.message,success:false});
     }
 }
 
