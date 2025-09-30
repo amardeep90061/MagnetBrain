@@ -19,7 +19,7 @@ function Signup() {
             username,email,password
         }; 
         try {
-            const url="https://magnet-brain-backend.vercel.app/auth/signup"
+            const url="https://magnet-brain-delta.vercel.app/auth/signup"
             const response= await fetch(url,{
                 method:"POST",
                 headers:{
