@@ -14,7 +14,7 @@ const TaskUpdateForm = () => {
     const [status, setStatus] = useState('');
     const [message, setMessage] = useState('');
     
-    const API_URL = `https://magnet-brain-la6388ra6-amardeep-prajapatis-projects.vercel.app/api/task/${id}`; 
+    const API_URL = `https://magnet-brain-backend.vercel.app/api/task/${id}`; 
 
     const formatDate = (isoString) => {
         if (!isoString) return '';
