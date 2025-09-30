@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGODB_URL)
   .then(() => console.log('Connected!'));
 
   const corsOptions = {
-    origin: 'http://localhost:5173', // 2. ONLY allow your frontend's origin
+    origin: ['http://localhost:5173','https://magnet-brain-backend.vercel.app/'] // 2. ONLY allow your frontend's origin
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // 3. Allow these methods
     credentials: true, // If you plan to use cookies/sessions
     optionsSuccessStatus: 204
