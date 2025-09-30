@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [email,setEmail]=useState();
@@ -25,26 +25,26 @@ const Navbar = () => {
   return (
     <nav className="w-full bg-gray-200 flex justify-between py-4 px-10">
         <div className='flex gap-8'>
-        <a href="/tasks"><b>Home</b></a>
-        <a href="/tasks"><b>All Tasks</b></a>
-        <a href="/taskCreate"><b>Create A task</b></a>
+        <Link to="/tasks"><b>Home</b></Link>
+        <Link to="/tasks"><b>All Tasks</b></Link>
+        <Link to="/taskCreate"><b>Create A task</b></Link>
         </div>
         <div className='flex gap-8'>
           {isLogin ? (
             <div className="flex gap-4">
                 <p>Welcome, {email}</p>
-                <a onClick={handleLogout} className='cursor-pointer'>
+                <Link onClick={handleLogout} className='cursor-pointer'>
                     <b>Logout</b>
-                </a>
+                </Link>
             </div>
         ) : (
             <div className="auth-links">
-                <a href="/login" className='cursor-pointer'>
+                <Link to="/login" className='cursor-pointer'>
                     <b>LogIn</b>
-                </a>
-                <a href='/signup' className='cursor-pointer ml-[10px]'>
+                </Link>
+                <Link to='/signup' className='cursor-pointer ml-[10px]'>
                     <b>SignUp</b>
-                </a>
+                </Link>
             </div>
         )}
         </div>
