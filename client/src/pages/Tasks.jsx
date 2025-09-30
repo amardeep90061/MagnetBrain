@@ -20,7 +20,7 @@ const sortedTasks = data.slice().sort((a, b) => {
 
     const getAllTasks = async() => {
         try {
-            const response = await fetch('https://magnet-brain-backend.vercel.app/api/tasks', {   
+            const response = await fetch('https://magnet-brain-delta.vercel.app/api/tasks', {   
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
